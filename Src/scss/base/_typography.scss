@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Proxima-Nova-300;
+    src: url(../../assets/fonts/Fontspring-DEMO-proximanova-thin.woff2);
+    font-display: swap;
+  }
+@font-face {
+    font-family: Proxima-Nova-400;
+    src: url(../../assets/fonts/Fontspring-DEMO-proximanova-light.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: Proxima-Nova-500;
+    src: url(../../assets/fonts/Fontspring-DEMO-proximanova-regular.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: Proxima-Nova-600;
+    src: url(../../assets/fonts/Fontspring-DEMO-proximanova-medium.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: Proxima-Nova-700;
+    src: url(../../assets/fonts/ProximaNova-Black.woff2);
+    font-display: swap;
+}
+body{
+    font-family: "Proxima-Nova-400", Arial, Sans-Serif;
+}
+
+h1{
+    font-family: "Proxima-Nova-300", Arial, Sans-Serif;
+}
+
+h2{
+    font-family: "Proxima-Nova-400", Arial, Sans-Serif;
+}
+
+h3{
+    font-family: "Proxima-Nova-700", Arial, Sans-Serif;
+    font-size: 18px;
+}
+
+h4{
+    font-family: "Proxima-Nova-600", Arial, Sans-Serif;
+}
+
+h5{
+    font-family: "Proxima-Nova-700", Arial, Sans-Serif;
+}
