@@ -1,0 +1,126 @@
+.image-enhancer {
+    &-popup {
+        width: 100%;
+        height: 100vh;
+        @include flex(flex, null, space-between, null);
+
+        .close {
+            margin:40px 0 0 50px;
+            svg{
+                width:67px;
+                height:67px;
+                background: $blue;
+                border-radius: 50%;
+                padding: 22px;
+                color: $bg-color;
+                cursor: pointer;
+            }
+        }
+        .image-gallery{
+            @include flex (flex, null, null, center, null, column);
+
+            > ul{
+                padding: 40px 30px;
+                background: $bg-dark;
+                border-radius: 0px 0px 15px 15px;
+                @include flex(flex, wrap);
+                gap: 25px;
+                margin-bottom: 90px;
+                li{
+                    width:122px;
+                    height: 104px;
+                    position: relative;
+
+                    img{
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+
+                    .remove{
+                        svg{
+                            width:27px;
+                            height:27px;
+                            background: $blue;
+                            border-radius: 50%;
+                            padding: 12px 6px;
+                            color: $bg-color;
+                            cursor: pointer;
+                            position: absolute;
+                            top: -14px;
+                            right: -14px;
+                            &:hover {
+                                background: $red-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .big-image{
+                width:1084px;
+                height:540px;
+
+                img{
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+
+                .image-scale{
+                    position: relative;
+                    ul{
+                        @include flex (flex, null, center, center);
+                        position: absolute;
+                        bottom: 30px;
+                        left: 0;
+                        right: 0;
+                        opacity: 0.7;
+                        li{
+                            background: $bg-dark;
+                            padding:5px 12px;
+                            border: 1px solid #000;
+                            svg{
+                                width: 13px;
+                                height: 13px;
+                                cursor: pointer;
+                            }
+                            &:first-child {
+                                border-radius: 9px 0px 0px 9px;
+                                border-right: 0px;
+                            }
+                            &:last-child {
+                                border-radius: 0px 9px 9px 0px;
+                                border-left: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-box{
+        max-width: 360px;
+        width: 100%;
+        align-self: center;
+        background: $bg-dark;
+        border-radius: 10px 0px 0px 10px;
+
+        h3{
+            padding: 12px 20px;
+            background: $blue;
+            border-radius: 10px 0px 0px 0px;
+            color: $text-color;
+        }
+
+        .bd-tp{
+            border-top: 1px solid $border-color;
+        }
+
+        .title{
+            @include font_size_color(null, 18px, 700);
+            padding:26px 20px;
+        }
+    }
+}
