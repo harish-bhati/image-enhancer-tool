@@ -1,0 +1,43 @@
+ 
+  .form-control {
+    font-size: 16px;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    cursor: pointer;
+  }
+
+  
+  .form-control:focus-within {
+    color: $color-white;
+  }
+  
+  input[type="radio"] {
+    appearance: none;
+    margin: 0;  
+    font-size: 16px;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);  
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em $blue;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
