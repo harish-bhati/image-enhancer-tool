@@ -12,7 +12,7 @@ body {
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
-*:where(:not(html, iframe, canvas, img, svg, video, audio, input):not(svg *, symbol *)) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio, input, button):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -150,19 +150,127 @@ h3 {
 }
 
 h4 {
-  font-family: "Proxima-Nova-600", Arial, Sans-Serif;
+  font-family: "Proxima-Nova-700", Arial, Sans-Serif;
+  font-size: 16px;
 }
 
 h5 {
   font-family: "Proxima-Nova-700", Arial, Sans-Serif;
 }
 
+.form-control {
+  font-size: 16px;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.form-control:focus-within {
+  color: #FFFFFF;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  font-size: 16px;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type=radio]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #4CBEFF;
+}
+
+input[type=radio]:checked::before {
+  transform: scale(1);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-left: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4CBEFF;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4CBEFF;
+}
+
+input:checked + .slider:before {
+  transform: translateX(17px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.image_upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .file_upload {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .file_upload-header {
   font-size: 60px;
   color: #FFFFFF;
@@ -264,6 +372,7 @@ h5 {
   height: 100vh;
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 .image-enhancer-popup .close {
   margin: 40px 0 0 50px;
@@ -319,7 +428,7 @@ h5 {
   background: #FF1604;
 }
 .image-enhancer-popup .image-gallery .big-image {
-  width: 1084px;
+  width: 100%;
   height: 540px;
 }
 .image-enhancer-popup .image-gallery .big-image img {
@@ -359,6 +468,59 @@ h5 {
   border-radius: 0px 9px 9px 0px;
   border-left: 0px;
 }
+.image-enhancer-popup .image-gallery .image-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0;
+}
+.image-enhancer-popup .image-gallery .image-info-size {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+}
+.image-enhancer-popup .image-gallery .image-info-size .hghlt-text {
+  color: #4CBEFF;
+}
+.image-enhancer-popup .image-gallery .image-info-size .nrml-text {
+  display: block;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+}
+.image-enhancer-popup .image-gallery .image-info-size svg {
+  width: 17px;
+  height: 9px;
+}
+.image-enhancer-popup .image-gallery .image-info-size .tc {
+  text-align: center;
+}
+.image-enhancer-popup .image-gallery .image-info-size.bd-lt-rt {
+  padding: 0 70px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.image-enhancer-popup .image-gallery .image-info .download-btn {
+  display: flex;
+  align-items: center;
+  background: #4CBEFF;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 25px;
+  cursor: pointer;
+}
+.image-enhancer-popup .image-gallery .image-info .download-btn svg {
+  width: 16px;
+  height: 15px;
+  margin-left: 10px;
+}
+.image-enhancer-popup .image-gallery .image-info .download-btn:hover {
+  background: rgba(76, 190, 255, 0.8);
+}
 .image-enhancer-box {
   max-width: 360px;
   width: 100%;
@@ -371,6 +533,7 @@ h5 {
   background: #4CBEFF;
   border-radius: 10px 0px 0px 0px;
   color: #142630;
+  font-weight: 700;
 }
 .image-enhancer-box .bd-tp {
   border-top: 1px solid #494949;
@@ -378,5 +541,8 @@ h5 {
 .image-enhancer-box .title {
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   padding: 26px 20px;
 }/*# sourceMappingURL=main.css.map */
