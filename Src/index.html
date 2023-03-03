@@ -10,21 +10,51 @@
 </head>
 
 <body>
-    <div class="image_upload">
-        <h1 class="image_upload-header">Image Enhancer Tool </h1>
+    <div class="file_upload">
+        <h1 class="file_upload-header">Image Enhancer Tool </h1>
 
-        <div class="file_upload">
+        <div class="file_upload-body">
             <div class="file_upload-img">
-                <h4 class="file-text">Click to Upload</h4>
-                <div class="file_upload-img-icon">
+                <h4 class="file_upload-text">Click to Upload</h4>
+                <div class="file_upload-icon">
                     <svg>
                         <use xlink:href="./icons.svg#upload-icon"></use>
                     </svg>
                 </div>
             </div>
-            <p>or, drag and drop your images here</p>
+            <h4 class="file_upload-drag">or, drag and drop your images here</h4>
             <input type="file" class="upload" id="upload-btn" />
         </div>
+
+        <div class="file_upload-search">
+            <input type="search" class="file_upload-inputsearch">
+        </div>
+
+        <div class="upload_type">
+            <a href="#" class="upload_type-link">
+                  <img src="assets/images/google-drive.png" alt="google Drive">
+                  <span>Google Drive</span>
+            </a>
+            <a href="#" class="upload_type-link">
+                  <img src="./assets/images/google-photos.png" alt="google Drive">
+                  <span>Google Drive</span>
+            </a>
+            <a href="#" class="upload_type-link">
+                  <img src="./assets/images/gallery.png" alt="google Drive">
+                  <span>Google Drive</span>
+            </a>
+        </div>
+
+        <div class="upload_setting">
+            <div class="settings">
+                <svg>
+                    <use xlink:href="./icons.svg#settings"></use>
+                </svg>                
+            </div>
+            <h4>Setting</h4>
+        </div>
+
+        <div class=""></div>
 
 
     </div>
