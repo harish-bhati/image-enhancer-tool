@@ -10,20 +10,86 @@
 </head>
 
 <body>
-    <div class="image_upload">
-        <h1 class="image_upload-header">Image Enhancer Tool </h1>
+    <div class="file_upload">
+        <h1 class="file_upload-header">Image Enhancer Tool </h1>
 
-        <div class="file_upload">
+        <div class="file_upload-body">
             <div class="file_upload-img">
-                <h4 class="file-text">Click to Upload</h4>
-                <div class="file_upload-img-icon">
+                <h4 class="file_upload-text">Click to Upload</h4>
+                <div class="file_upload-icon">
                     <svg>
                         <use xlink:href="./icons.svg#upload-icon"></use>
                     </svg>
                 </div>
             </div>
-            <p>or, drag and drop your images here</p>
+            <h4 class="file_upload-drag">or, drag and drop your images here</h4>
             <input type="file" class="upload" id="upload-btn" />
+        </div>
+
+        <div class="file_upload-search">
+            <input type="search" class="file_upload-inputsearch">
+        </div>
+
+        <div class="upload_type">
+            <a href="#" class="upload_type-link">
+                  <img src="assets/images/google-drive.png" alt="google Drive">
+                  <span>Google Drive</span>
+            </a>
+            <a href="#" class="upload_type-link">
+                  <img src="./assets/images/google-photos.png" alt="google Drive">
+                  <span>Google Photos</span>
+            </a>
+            <a href="#" class="upload_type-link">
+                  <img src="./assets/images/gallery.png" alt="google Drive">
+                  <span>Try Sample!</span>
+            </a>
+        </div>
+
+        <figure class="imagebox">           
+            <figcaption class="imagebox-caption">Sample Images</figcaption>
+            <figure class="imagebox-popup">
+                <img src="./assets/images/Sample001.png" alt="sample001">
+                <img src="./assets/images/Sample002.png" alt="sample002">
+                <img src="./assets/images/Sample003.png" alt="sample003">
+                <img src="./assets/images/Sample004.png" alt="sample004">
+                <img src="./assets/images/Sample005.png" alt="sample005">
+            </figure>
+            
+            
+        </figure>
+
+        <div class="upload_setting">
+            <div class="settings">
+                <svg>
+                    <use xlink:href="./icons.svg#settings"></use>
+                </svg>                
+            </div>
+            <h4>Setting</h4>
+        </div>
+
+        <div class="upscaling">      
+            <div class="upscaling-zoom">
+                <p>Upscaling</p>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Original
+                </label>                  
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    2x
+                </label>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    4x
+                </label>
+            </div>
+            <div class="upscaling-Noise bd-tp">
+                <p>Noise Reduction</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
         </div>
 
 
@@ -31,17 +97,6 @@
 
 
 
-    <!-- <h3 class="thin">Heading 1</h3>
-    <h3 class="light">Heading 2</h3>
-    <h3 class="regular">Heading 3</h3>
-    <h3 class="medium">Heading 4</h3>
-    <h3 class="semibold">Heading 5</h3>
-    <svg>
-        <use xlink:href="./icons.svg#arrow"></use>
-    </svg>
-    <svg>
-        <use xlink:href="./icons.svg#download"></use>
-    </svg> -->
 
 </body>
 
