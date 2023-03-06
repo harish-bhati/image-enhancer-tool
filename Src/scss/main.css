@@ -258,19 +258,13 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.image_upload {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .file_upload {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 88px;
 }
-
 .file_upload-header {
   font-size: 60px;
   color: #FFFFFF;
@@ -331,6 +325,7 @@ input:checked + .slider:before {
   height: 100%;
   outline: none;
   background-color: #303030;
+  border-radius: 5px;
   border: none;
 }
 
@@ -351,12 +346,30 @@ input:checked + .slider:before {
   gap: 11px;
 }
 
+.imagebox {
+  width: 630px;
+  background-color: #151515;
+  border-radius: 10px;
+  padding: 25px 19px;
+  margin-top: 26px;
+}
+.imagebox-caption {
+  font-size: 16px;
+  font-weight: 500;
+}
+.imagebox-popup {
+  margin-top: 10px;
+  display: flex;
+  justify-content: nul;
+  gap: 13px;
+}
+
 .upload_setting {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
-  margin-top: 52px;
+  margin: 52px 0px 16px 0px;
   width: 630px;
 }
 .upload_setting .settings svg {
@@ -365,6 +378,32 @@ input:checked + .slider:before {
 }
 .upload_setting h4 {
   font-size: 30px;
+}
+
+.upscaling {
+  max-width: 630px;
+  width: 100%;
+  align-self: center;
+  background: #151515;
+  padding: 31px 37px 29px 23px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.upscaling-zoom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.upscaling p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.upscaling-Noise {
+  display: flex;
 }
 
 .image-enhancer-popup {

@@ -1,10 +1,11 @@
 .file_upload {
 
     @include flex (flex, null, center, center, null, column);
+    padding-top: 88px;
 
     &-header {
         font-size: 60px;
-        color: $color-white;
+        color: $color-white;        
         padding-bottom: 54px;
     }
 
@@ -70,7 +71,7 @@
                 height: 100%;
                 outline: none;
                 background-color: $bg-light;
-                
+                border-radius: 5px;
                 border: none;
             }
 }
@@ -89,9 +90,28 @@
     }
 }
 
+.imagebox{
+    width: 630px;
+    background-color: $bg-dark;
+    border-radius: 10px;
+    // display: flex
+    padding: 25px 19px;
+    margin-top: 26px;
+
+    &-caption{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &-popup{
+        margin-top: 10px;
+    @include   flex (flex,null,nul,null,13px)
+    }
+}
+
 .upload_setting{
     @include flex (flex,null,flex-start, center,12px,null);
-    margin-top: 52px;
+    margin: 52px 0px 16px 0px;
     width: 630px;
 
     .settings{       
@@ -106,4 +126,29 @@
     }
 }
 
+.upscaling{
+    max-width: 630px;
+    width: 100%;
+    align-self: center;
+    background: #151515;
+    padding: 31px 37px 29px 23px;
+    border-radius:10px;
+   @include flex (flex,null,space-between, center);
+   margin-bottom: 20px;
+
+   &-zoom{    
+
+   @include flex (flex,null,space-between, center,15px)
+
+   }
+
+   p{
+    font-size: 18px;
+    font-weight: 700;
+   }
+
+   &-Noise{
+   @include flex (flex, null,null , $align_item:null,$gap:null,$direction:null);   
+   }
+}
 
