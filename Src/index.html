@@ -10,94 +10,94 @@
 </head>
 
 <body>
-    <div class="file_upload">
-        <h1 class="file_upload-header">Image Enhancer Tool </h1>
+    <main class="file_upload">
+        <div class="file_upload-container">
+            <h1 class="file_upload-header">Image Enhancer Tool </h1>
 
-        <div class="file_upload-body">
-            <div class="file_upload-img">
-                <h4 class="file_upload-text">Click to Upload</h4>
-                <div class="file_upload-icon">
+            <div class="file_upload-body">
+                <div class="file_upload-content">
+                    <div class="file_upload-img">
+                        <span class="file_upload-text">Click to Upload</span>
+                        <div class="file_upload-icon">
+                            <svg>
+                                <use xlink:href="./assets/icons/icons.svg#upload-icon"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="file_upload-drag">or, drag and drop your images here</p>
+                </div>
+                <input type="file" class="upload" id="upload-btn" />
+            </div>
+
+            <div class="file_upload-search">
+
+            </div>
+
+            <input type="text" class="file_upload-inputsearch" placeholder="Paste Your Link Here.....">
+
+            <div class="upload_type">
+                <a href="javascript:void(0)" class="upload_type-link">
+                    <img src="assets/images/google-drive.png" alt="google Drive">
+                    <span>Google Drive</span>
+                </a>
+                <a href="javascript:void(0)" class="upload_type-link">
+                    <img src="./assets/images/google-photos.png" alt="google Drive">
+                    <span>Google Photos</span>
+                </a>
+                <a href="javascript:void(0)" class="upload_type-link">
+                    <img src="./assets/images/gallery.png" alt="google Drive">
+                    <span>Try Sample!</span>
+                </a>
+            </div>
+
+            <figure class="imagebox">
+                <figcaption class="imagebox-caption">Sample Images</figcaption>
+                <figure class="imagebox-popup">
+                    <img src="./assets/images/Sample001.png" alt="sample001">
+                    <img src="./assets/images/Sample002.png" alt="sample002">
+                    <img src="./assets/images/Sample003.png" alt="sample003">
+                    <img src="./assets/images/Sample004.png" alt="sample004">
+                    <img src="./assets/images/Sample005.png" alt="sample005">
+                </figure>
+            </figure>
+
+            <div class="upload_setting">
+                <h2>
                     <svg>
-                        <use xlink:href="./icons.svg#upload-icon"></use>
+                        <use xlink:href="./assets/icons/icons.svg#settings"></use>
                     </svg>
+                    <span>Setting</span>
+                </h2>
+
+            </div>
+
+            <div class="upscaling">
+                <div class="upscaling-zoom image-enhancer-settings">
+                    <span>Upscaling</span>
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        Original
+                    </label>
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        2x
+                    </label>
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        4x
+                    </label>
+                </div>
+                <div class="upscaling-Noise image-enhancer-settings ">
+                    <span>Noise Reduction</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
             </div>
-            <h4 class="file_upload-drag">or, drag and drop your images here</h4>
-            <input type="file" class="upload" id="upload-btn" />
-        </div>
-
-        <div class="file_upload-search">
-            <input type="search" class="file_upload-inputsearch">
-        </div>
-
-        <div class="upload_type">
-            <a href="#" class="upload_type-link">
-                  <img src="assets/images/google-drive.png" alt="google Drive">
-                  <span>Google Drive</span>
-            </a>
-            <a href="#" class="upload_type-link">
-                  <img src="./assets/images/google-photos.png" alt="google Drive">
-                  <span>Google Photos</span>
-            </a>
-            <a href="#" class="upload_type-link">
-                  <img src="./assets/images/gallery.png" alt="google Drive">
-                  <span>Try Sample!</span>
-            </a>
-        </div>
-
-        <figure class="imagebox">           
-            <figcaption class="imagebox-caption">Sample Images</figcaption>
-            <figure class="imagebox-popup">
-                <img src="./assets/images/Sample001.png" alt="sample001">
-                <img src="./assets/images/Sample002.png" alt="sample002">
-                <img src="./assets/images/Sample003.png" alt="sample003">
-                <img src="./assets/images/Sample004.png" alt="sample004">
-                <img src="./assets/images/Sample005.png" alt="sample005">
-            </figure>
             
-            
-        </figure>
-
-        <div class="upload_setting">
-            <div class="settings">
-                <svg>
-                    <use xlink:href="./icons.svg#settings"></use>
-                </svg>                
-            </div>
-            <h4>Setting</h4>
         </div>
-
-        <div class="upscaling">      
-            <div class="upscaling-zoom">
-                <p>Upscaling</p>
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    Original
-                </label>                  
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    2x
-                </label>
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    4x
-                </label>
-            </div>
-            <div class="upscaling-Noise bd-tp">
-                <p>Noise Reduction</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-            </div>
-        </div>
-
-
-    </div>
-
-
-
-
+    </main>
 </body>
 
 </html>
