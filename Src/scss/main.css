@@ -383,7 +383,6 @@ input:checked + .slider:before {
 .upscaling {
   max-width: 630px;
   width: 100%;
-  align-self: center;
   background: #151515;
   padding: 31px 37px 29px 23px;
   border-radius: 10px;
