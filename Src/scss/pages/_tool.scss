@@ -2,12 +2,11 @@
     &-popup {
         width: 100%;
         height: 100vh;
-        @include flex(flex, null, space-between, null);
+        display: grid;
+        grid-template-columns: 100px 1fr 360px;
         gap:40px;
 
         .close {
-            margin:40px 0 0 50px;
-            svg{
                 width:67px;
                 height:67px;
                 background: $blue;
@@ -15,24 +14,25 @@
                 padding: 22px;
                 color: $bg-color;
                 cursor: pointer;
-            }
+                margin:40px 0 0 40px;
         }
-        .image-gallery{
+        &-gallery{
             @include flex (flex, null, null, center, null, column);
 
             > ul{
                 padding: 40px 30px;
                 background: $bg-dark;
                 border-radius: 0px 0px 15px 15px;
-                @include flex(flex, wrap);
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
                 gap: 25px;
                 margin-bottom: 90px;
+                max-width: 765px;
                 li{
-                    width:122px;
-                    height: 104px;
                     position: relative;
 
                     img{
+                        aspect-ratio: 1/1;
                         min-width: 100%;
                         min-height: 100%;
                         object-fit: cover;
@@ -60,7 +60,7 @@
             }
             .big-image{
                 width:100%;
-                height:540px;
+                aspect-ratio: 16/9;
 
                 img{
                     min-width: 100%;
@@ -121,7 +121,8 @@
                         text-align: center;
                     }
                     &.bd-lt-rt{
-                        padding: 0 70px;
+                        // padding: 0 70px;
+                        padding: 0 3%;
                         border: 1px solid rgba($color: $color-white, $alpha: 0.2);
                         border-top: 0px;
                         border-bottom: 0px;
@@ -152,7 +153,6 @@
     }
 
     &-box{
-        max-width: 360px;
         width: 100%;
         align-self: center;
         background: $bg-dark;

@@ -9,12 +9,10 @@
 </head>
 <body>
     <section class="image-enhancer-popup">
-        <div class="close">
-            <svg>
-                <use xlink:href="./icons.svg#close"></use>
-            </svg>
-        </div>
-        <div class="image-gallery">
+        <svg class="close">
+            <use xlink:href="./icons.svg#close"></use>
+        </svg>
+        <div class="image-enhancer-popup-gallery">
             <ul>
                 <li>
                     <img src="./assets/images/image-001.png" alt="image-001">
@@ -57,55 +55,54 @@
                     </div>
                  </li>
             </ul>
-            <div class="big-image">
-                <img src="./assets/images/image-001.png" alt="image-001">
-                <div class="image-scale">
-                    <ul>
-                        <li>
-                            <svg>
-                                <use xlink:href="./icons.svg#subtract"></use>
-                            </svg>
-                        </li>
-                        <li><p>50 %</p></li>
-                        <li>
-                            <svg>
-                                <use xlink:href="./icons.svg#add"></use>
-                            </svg>
-                        </li>
-                    </ul>
+            <figure>
+                <div class="big-image">
+                    <img src="./assets/images/image-001.png" alt="image-001">
+                    <div class="image-scale">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="./icons.svg#subtract"></use>
+                                </svg>
+                            </li>
+                            <li><p>50 %</p></li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="./icons.svg#add"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="image-info">
-                <div class="image-info-size">
-                    <h4 class="hghlt-text">Image <br> Size </h4>
-                    <h4 class="tc">300<span class="hghlt-text">KB</span><span class="nrml-text">Original</span></h4>
-                    <svg>
-                        <use xlink:href="./icons.svg#arrow"></use>
-                    </svg>
-                    <h4 class="tc">700<span class="hghlt-text">KB</span><span class="nrml-text">updated</span></h4>
+                <figcaption class="image-info">
+                    <div class="image-info-size">
+                        <h4 class="hghlt-text">Image <br> Size </h4>
+                        <h4 class="tc">300<span class="hghlt-text">KB</span><span class="nrml-text">Original</span></h4>
+                        <svg>
+                            <use xlink:href="./icons.svg#arrow"></use>
+                        </svg>
+                        <h4 class="tc">700<span class="hghlt-text">KB</span><span class="nrml-text">updated</span></h4>
+                    </div>
+                    <div class="image-info-size bd-lt-rt">
+                        <h4 class="hghlt-text">Resolution <br> Size </h4>
+                        <h4 class="tc">300x300<span class="nrml-text">Original</span></h4>
+                        <svg>
+                            <use xlink:href="./icons.svg#arrow"></use>
+                        </svg>
+                        <h4 class="tc">1000x1000<span class="nrml-text">updated</span></h4>
+                    </div>
+                        <button class="download-btn">
+                            Download Image
+                        <svg>
+                        <use xlink:href="./icons.svg#download"></use>
+                        </svg>
+                    </button>
                 </div>
-                <div class="image-info-size bd-lt-rt">
-                    <h4 class="hghlt-text">Resolution <br> Size </h4>
-                    <h4 class="tc">300x300<span class="nrml-text">Original</span></h4>
-                    <svg>
-                        <use xlink:href="./icons.svg#arrow"></use>
-                    </svg>
-                    <h4 class="tc">1000x1000<span class="nrml-text">updated</span></h4>
-                </div>
-                    <button class="download-btn">
-                        Download Image
-                    <svg>
-                       <use xlink:href="./icons.svg#download"></use>
-                    </svg>
-                </button>
-            </div>
-            <div>
-                
-            </div>
+            </figure>
         </div>
         <div class="image-enhancer-box">
             <h3>Image Enhancer</h3>
-            <div class="image-enhancer-box-title">
+            <div class="image-enhancer-box-title image-enhancer-settings">
                 <span>Upscaling</span>
                 <label class="form-control">
                     <input type="radio" name="radio" />
@@ -120,7 +117,7 @@
                     4x
                 </label>
             </div>
-            <div class="image-enhancer-box-title bd-tp">
+            <div class="image-enhancer-box-title bd-tp image-enhancer-settings">
                 <span>Noise Reduction</span>
                 <label class="switch">
                     <input type="checkbox">
