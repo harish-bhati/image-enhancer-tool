@@ -105,13 +105,12 @@
                 &-size{
                     @include flex (flex, null, null, center,);
                     gap:20px;
-                    font-weight: 700;
                     .hghlt-text{
                         color: $blue;
                     }
                     .nrml-text{
                         display: block;
-                        font-weight: normal;
+                        font-family: ProximaNova-Regular;
                         color:rgba($color: $color-white, $alpha: 0.8);
                     }
                     svg{
@@ -134,9 +133,9 @@
                     border-radius: 5px;
                     border: none;
                     font-size: 14px;
-                    font-weight: 600;
                     padding: 13px 25px;
                     cursor: pointer;
+                    font-family: ProximaNova-Bold;
 
                     svg{
                         width:16px;
@@ -164,18 +163,20 @@
             background: $blue;
             border-radius: 10px 0px 0px 0px;
             color: $text-color;
-            font-weight: 700;
         }
 
         .bd-tp{
             border-top: 1px solid $border-color;
         }
 
-        .title{
-            @include font_size_color(null, 18px, 700);
+        &-title{
             @include flex (flex, null, null, center,);
             gap:15px;
             padding:26px 20px;
+            span{
+                font-family: ProximaNova-Bold;
+                @include font_size_color(null, 18px, null);
+            }
         }
     }
 }
