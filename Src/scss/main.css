@@ -58,8 +58,7 @@ textarea {
 /* minimum style to allow to style meter element */
 meter {
   -webkit-appearance: revert;
-  -moz-appearance: revert;
-       appearance: revert;
+  appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
@@ -68,9 +67,6 @@ meter {
 }
 
 /* reset default text opacity of input placeholder */
-::-moz-placeholder {
-  color: unset;
-}
 ::placeholder {
   color: unset;
 }
@@ -160,9 +156,7 @@ h5 {
   color: #FFFFFF;
 }
 .image-enhancer-settings input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
   font-size: 16px;
   color: currentColor;
@@ -236,9 +230,15 @@ h5 {
   border-radius: 50%;
 }
 
+.file_upload {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
 .file_upload-container {
-  padding: 88px 0px;
-  width: 660px;
+  max-width: 660px;
+  width: 100%;
+  padding: 10px 15px;
   margin: 0 auto;
 }
 .file_upload-header {
@@ -254,7 +254,7 @@ h5 {
   overflow: hidden;
   text-align: center;
   padding: 0px 15px;
-  height: 255px;
+  aspect-ratio: 16/5;
   border-radius: 15px;
   position: relative;
   border: 1px solid transparent;
@@ -436,8 +436,7 @@ h5 {
   aspect-ratio: 1/1;
   min-width: 100%;
   min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
 }
 .image-enhancer-popup-gallery > ul li .remove svg {
@@ -462,8 +461,7 @@ h5 {
 .image-enhancer-popup-gallery .big-image img {
   min-width: 100%;
   min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .image-enhancer-popup-gallery .big-image .image-scale {
   position: relative;

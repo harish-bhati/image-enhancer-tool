@@ -1,8 +1,11 @@
 .file_upload {
-
+    display: grid;
+    place-items: center;
+    height: 100vh;;
     &-container {
-        padding: 88px 0px;
-        width: 660px;
+        max-width: 660px;
+        width: 100%;
+        padding: 10px 15px;
         margin: 0 auto;
     }
 
@@ -20,7 +23,7 @@
         overflow: hidden;
         text-align: center;
         padding: 0px 15px;
-        height: 255px;
+        aspect-ratio: 16/5;
         border-radius: 15px;
         position: relative;
         border:1px solid transparent;
