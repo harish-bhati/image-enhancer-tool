@@ -58,7 +58,8 @@ textarea {
 /* minimum style to allow to style meter element */
 meter {
   -webkit-appearance: revert;
-  appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
@@ -67,6 +68,9 @@ meter {
 }
 
 /* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
 ::placeholder {
   color: unset;
 }
@@ -156,7 +160,9 @@ h5 {
   color: #FFFFFF;
 }
 .image-enhancer-settings input[type=radio] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   margin: 0;
   font-size: 16px;
   color: currentColor;
@@ -251,9 +257,10 @@ h5 {
   height: 255px;
   border-radius: 15px;
   position: relative;
+  border: 1px solid transparent;
 }
 .file_upload-body:hover {
-  border: 1px solid #fff;
+  border-color: #FFFFFF;
   background-color: #4D4D4D;
 }
 .file_upload-img {
@@ -305,6 +312,7 @@ h5 {
   color: #303030;
 }
 .file_upload-inputsearch:hover {
+  color: #FFFFFF;
   background-color: #4D4D4D;
 }
 
@@ -428,7 +436,8 @@ h5 {
   aspect-ratio: 1/1;
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 .image-enhancer-popup-gallery > ul li .remove svg {
@@ -453,7 +462,8 @@ h5 {
 .image-enhancer-popup-gallery .big-image img {
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .image-enhancer-popup-gallery .big-image .image-scale {
   position: relative;
@@ -562,4 +572,8 @@ h5 {
 .image-enhancer-box-title span {
   font-family: ProximaNova-Bold;
   font-size: 18px;
+}
+
+.transition {
+  transition: all 0.5s ease;
 }/*# sourceMappingURL=main.css.map */

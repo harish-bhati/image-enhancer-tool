@@ -23,11 +23,11 @@
         height: 255px;
         border-radius: 15px;
         position: relative;
-    }
-
-    &-body:hover{
-        border:1px solid #fff;
-        background-color: $bg-verylight;
+        border:1px solid transparent;
+        &:hover{
+            border-color:$color-white;
+            background-color: $bg-verylight;
+        }
     }
 
     &-img {
@@ -82,13 +82,15 @@
         padding-left: 13px;
     }
 
-    &-inputsearch:focus{
-        background-color: $color-white;
-        color:$bg-light;
-    }
-
-    &-inputsearch:hover{
-        background-color: $bg-verylight;
+    &-inputsearch{
+        &:focus{
+            background-color: $color-white;
+            color:$bg-light;
+        }
+        &:hover{
+            color: $color-white;
+            background-color: $bg-verylight;
+        }
     }
 }
 
@@ -102,11 +104,10 @@
         padding: 11px 37px 10px 39px;
         border-radius: 5px;
         background-color: $bg-light;
-        @include flex (flex, null, null, center, 11px)
-    }
-
-    &-link:hover{
-        background-color: $bg-verylight;
+        @include flex (flex, null, null, center, 11px);
+        &:hover{
+            background-color: $bg-verylight;
+        }
     }
 }
 
@@ -143,7 +144,6 @@
             height: 24px;
         }
    
-
     span {
         font-size: 30px;
         margin-left: 11px;
@@ -152,7 +152,6 @@
 }
 
 .upscaling {
-
     max-width: 100%;
     width: 100%;
     background: #151515;
