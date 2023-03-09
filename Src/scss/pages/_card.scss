@@ -118,9 +118,19 @@
     width: 100%;
     background-color: $bg-dark;
     border-radius: 10px;
-    padding: 25px 19px;
     margin-top: 26px;
-
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: all .3s linear;
+    &.imagebox-show{
+        max-height: 300px; 
+        margin-top: 26px; 
+        padding: 25px 19px;
+        opacity: 1;
+    }
     &-caption {
         font-size: 16px;
         font-weight: 500;
@@ -162,7 +172,11 @@
     border-radius: 10px;
     @include flex (flex, null, space-between, center);
     margin-bottom: 20px;
-
+    &.upscaling-noise-hidden {
+        .upscaling-Noise{
+            display: none;
+        }
+    }
     &-zoom {
         @include flex (flex, null, space-between, center, 15px);
     }

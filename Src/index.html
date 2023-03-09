@@ -71,26 +71,26 @@
 
             </div>
 
-            <div class="upscaling">
-                <div class="upscaling-zoom image-enhancer-settings">
+            <div class="upscaling upscaling-noise-hidden" id="upscalingOption">
+                <div class="upscaling-zoom image-enhancer-settings" >
                     <span>Upscaling</span>
                     <label class="form-control">
-                        <input type="radio" name="radio" />
+                        <input type="radio" name="scaling" value="Original" id="scalingOrg" />
                         Original
                     </label>
                     <label class="form-control">
-                        <input type="radio" name="radio" />
+                        <input type="radio" name="scaling" value="2x" id="scaling2x" checked/>
                         2x
                     </label>
                     <label class="form-control">
-                        <input type="radio" name="radio" />
+                        <input type="radio" name="scaling" value="4x" id="scaling4x" />
                         4x
                     </label>
                 </div>
                 <div class="upscaling-Noise image-enhancer-settings ">
                     <span>Noise Reduction</span>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -98,6 +98,7 @@
             
         </div>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
