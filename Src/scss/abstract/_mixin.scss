@@ -128,30 +128,35 @@
   $ipad-pro-width: 1024px;
   $phone-width: 768px;
   $small-phone-width: 480px;
-  
+  $small-iphone-width:480px;
   @mixin device($media) {
     @if $media == large-desktop {
-      @media only screen and (max-width: #{$large-screen-width}) {
+      @media only screen and (min-width: #{$large-screen-width}) {
         @content;
       }
     }
     @if $media == laptop {
-      @media only screen and (max-width: #{$laptop-screen-width}) {
+      @media only screen and (min-width: #{$laptop-screen-width}) {
         @content;
       }
     }
     @if $media == ipad {
-      @media only screen and (max-width: #{$ipad-pro-width}) {
+      @media only screen and (min-width: #{$ipad-pro-width}) {
         @content;
       }
     }
     @if $media == phone {
-      @media only screen and (max-width: #{$phone-width}) {
+      @media only screen and (min-width: #{$phone-width}) {
         @content;
       }
     }
     @if $media == sm-phone {
-      @media only screen and (max-width: #{$small-phone-width}) {
+      @media only screen and (min-width: #{$small-phone-width}) {
+        @content;
+      }
+    }
+    @if $media == i-phone {
+      @media only screen and (min-width: #{$small-iphone-width}) {
         @content;
       }
     }
