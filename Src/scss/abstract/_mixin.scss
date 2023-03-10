@@ -124,10 +124,10 @@
   }
   
   $large-screen-width: 1580px;
-  $laptop-screen-width: 1240px;
+  $laptop-screen-width: 1280px;
   $ipad-pro-width: 1024px;
-  $phone-width: 767px;
-  $small-phone-width: 640px;
+  $phone-width: 768px;
+  $small-phone-width: 480px;
   
   @mixin device($media) {
     @if $media == large-desktop {
