@@ -171,9 +171,8 @@
             text-align: center;
         }
     }
-}
 
-&.imagebox-show {
+&-show {
     max-height: 300px;
     margin-top: 26px;
     padding: 25px 19px;
@@ -194,6 +193,7 @@
     }
 }
 }
+
 
 .upload_setting {
     @include device(sm-phone) {

@@ -12,13 +12,6 @@
             gap:10px;
             position: relative;
         }
-        
-        // @include device(sm-phone)
-        // {
-        //     grid-template-columns: 1fr;
-        //     gap:10px;
-        //     position: relative;
-        // }
 
         .close {
                 width:67px;
@@ -39,11 +32,6 @@
                     top:15px;
                     right:22px;
                 }
-                // @include device(sm-phone){
-                //     width:36px;
-                //     height:36px;
-                //     padding: 10px;
-                // }
         
         }
         &-gallery{
@@ -61,19 +49,20 @@
 
                 @include device(ipad){
                     padding: 80px 30px 20px 30px;
-                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-columns: repeat(5, 121px);
                     gap: 10px;
-                    overflow: hidden;
+                    overflow: auto;
                     border-radius: 0px;
+                    max-width: 480px;
                 }
-
-                // @include device(sm-phone){
-                //     padding: 80px 30px 20px 30px;
-                //     grid-template-columns: repeat(3, 1fr);
-                //     gap: 10px;
-                //     overflow: hidden;
-                //     border-radius: 0px;
-                // }
+                @include device(phone){
+                    grid-template-columns: repeat(5, 201px);
+                    max-width: 768px;
+                }
+                @include device(sm-phone){
+                    grid-template-columns: repeat(5, 121px);
+                    max-width: 480px;
+                }
 
                 li{
                     position: relative;
@@ -102,10 +91,6 @@
                         @include device(phone){
                             aspect-ratio: 1.2/1;
                         }
-
-                        // @include device(sm-phone){
-                        //     aspect-ratio: 1.2/1;
-                        // }
                     }
 
                     .remove{
@@ -128,11 +113,6 @@
                                 top: -14px;
                                 right: -3px;
                             }
-                        }
-                    }
-                    &:nth-child(4), &:nth-child(5){
-                        @include device(ipad){
-                            display: none;
                         }
                     }
                 }
