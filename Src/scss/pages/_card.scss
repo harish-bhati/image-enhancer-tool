@@ -8,6 +8,11 @@
         width: 100%;
         padding: 10px 15px;
         margin: 0 auto;
+
+        @include device(sm-phone) {
+            max-width: 400px;
+            padding: 0px 30px;
+        }
     }
 
     &-header {
@@ -16,10 +21,9 @@
         padding-bottom: 54px;
         text-align: center;
 
-        @include device(sm-phone)
-        {
+        @include device(sm-phone) {
             padding: 88px 0px 40px 0px;
-                font-size: 30px; 
+            font-size: 30px;
         }
     }
 
@@ -34,6 +38,12 @@
         border-radius: 15px;
         position: relative;
         border: 1px solid transparent;
+
+        @include device(sm-phone) {
+            width: 100%;
+            height: 193px;
+            padding: 0px 0px;
+        }
 
         &:hover {
             border-color: $color-white;
@@ -112,6 +122,17 @@
     @include flex (flex, null, space-between, center);
     margin-top: 38px;
 
+    @include device(sm-phone) {
+        @include flex (flex, null, null, null, 12px, column);
+        margin-top: 28px;
+        width: 100%;
+
+        &-link {
+            width: 100%;
+            @include flex (flex, null, center);
+        }
+    }
+
     &-link {
         padding: 11px 37px 10px 39px;
         border-radius: 5px;
@@ -135,28 +156,50 @@
     margin: 0;
     opacity: 0;
     transition: all .3s linear;
-    &.imagebox-show{
-        max-height: 300px; 
-        margin-top: 26px; 
-        padding: 25px 19px;
-        opacity: 1;
-    }
-    &-caption {
-        font-size: 16px;
-        font-weight: 500;
-    }
 
-    &-popup {
-        margin-top: 10px;
-        @include flex (flex, null, space-between);
+    @include device(sm-phone) {
+        padding: 15px 20px;
 
-        img {
-            cursor: pointer;
+        &-popup {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        &-caption {
+            text-align: center;
         }
     }
 }
 
+&.imagebox-show {
+    max-height: 300px;
+    margin-top: 26px;
+    padding: 25px 19px;
+    opacity: 1;
+}
+
+&-caption {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+&-popup {
+    margin-top: 10px;
+    @include flex (flex, null, space-between);
+
+    img {
+        cursor: pointer;
+    }
+}
+}
+
 .upload_setting {
+    @include device(sm-phone) {
+        width: 100%;
+        margin: 65px 0px 12px 0px;
+    }
 
     @include flex (flex, null, flex-start, center, 12px);
     margin: 52px 0px 16px 0px;
@@ -182,13 +225,23 @@
     border-radius: 10px;
     @include flex (flex, null, space-between, center);
     margin-bottom: 20px;
+
+    @include device(sm-phone){
+        @include flex (null, null, center, null, 12px, column);
+        padding: 28px 17px 20px 25px;
+    }
+
     &.upscaling-noise-hidden {
-        .upscaling-Noise{
+        .upscaling-Noise {
             display: none;
         }
     }
+
     &-zoom {
         @include flex (flex, null, space-between, center, 15px);
+        @include device(sm-phone){
+            width: 100%;
+        }
     }
 
     span {
@@ -198,91 +251,96 @@
 
     &-Noise {
         @include flex (flex);
+        @include device(sm-phone){
+            width: 100%;
+            margin-top: 26px;
+        }
     }
 }
 
-.right_reserved{
+.right_reserved {
 
-   p{
-    font-size: 16px;
-    color: $light-grey;
-    text-align: center;
-    margin-top: 121px;
-   } 
-
+    p {
+        font-size: 16px;
+        color: $light-grey;
+        text-align: center;
+        margin-top: 121px;
+    }
+    
+    @include device(sm-phone){
+        p{
+            display: none;
+        }
+    }
 }
 
 
 // Media Queries
 
 
-@media screen and (max-width: 480px) {
-    .file_upload {
+// @media screen and (max-width: 480px) {
+//     .file_upload {
 
-        &-container {
-            max-width: 400px;
-            padding: 0px 30px;
-        }
+//         // &-container {
+//         //     max-width: 400px;
+//         //     padding: 0px 30px;
+//         // }
 
-        &-body {
-            width: 100%;
-            height: 193px;
-            padding: 0px 0px;
-            
-        }
+//         // &-body {
+//         //     width: 100%;
+//         //     height: 193px;
+//         //     padding: 0px 0px;
 
-    }
+//         // }
 
-    .upload_type {
-        @include flex (flex, null, null, null, 12px, column);
-        margin-top: 28px;
-        width: 100%;
+//     }
 
-        &-link {
-            width: 100%;
-            @include flex (flex, null, center);
-        }
+//     // .upload_type {
+//     //     @include flex (flex, null, null, null, 12px, column);
+//     //     margin-top: 28px;
+//     //     width: 100%;
 
-    }
+//     //     &-link {
+//     //         width: 100%;
+//     //         @include flex (flex, null, center);
+//     //     }
 
-    .imagebox {
-        padding: 15px 20px;
+//     // }
 
-        &-popup {
-            display: grid;
-            place-items: center;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
+//     // .imagebox {
+//     //     padding: 15px 20px;
 
-        &-caption {
-            text-align: center;
-        }
-    }
+//     //     &-popup {
+//     //         display: grid;
+//     //         place-items: center;
+//     //         grid-template-columns: repeat(2, 1fr);
+//     //         gap: 12px;
+//     //     }
 
-    .upload_setting {
-        width: 100%;
-        margin: 65px 0px 12px 0px;
-    }
+//     //     &-caption {
+//     //         text-align: center;
+//     //     }
+//     // }
 
-    .upscaling {
-        @include flex (null, null, center, null, 12px, column);
-        padding: 28px 17px 20px 25px;
+//     // .upload_setting {
+//     //     width: 100%;
+//     //     margin: 65px 0px 12px 0px;
+//     // }
 
-        &-zoom {
-            width: 100%;
-        }
+//     .upscaling {
+//         // @include flex (null, null, center, null, 12px, column);
+//         // padding: 28px 17px 20px 25px;
 
-        &-Noise {
-            width: 100%;
-            margin-top: 26px;
-        }
-    }
+//         // &-zoom {
+//         //     width: 100%;
+//         // }
+
+//         // &-Noise {
+//         //     width: 100%;
+//         //     margin-top: 26px;
+//         // }
+//     }
+
     
-    .right_reserved{
-        p{
-            display: none;
-        }
-    }
 
-}
+// }

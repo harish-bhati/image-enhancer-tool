@@ -274,6 +274,12 @@ h5 {
   padding: 10px 15px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 480px) {
+  .file_upload-container {
+    max-width: 400px;
+    padding: 0px 30px;
+  }
+}
 .file_upload-header {
   font-size: 60px;
   color: #FFFFFF;
@@ -297,6 +303,13 @@ h5 {
   border-radius: 15px;
   position: relative;
   border: 1px solid transparent;
+}
+@media only screen and (max-width: 480px) {
+  .file_upload-body {
+    width: 100%;
+    height: 193px;
+    padding: 0px 0px;
+  }
 }
 .file_upload-body:hover {
   border-color: #FFFFFF;
@@ -361,6 +374,20 @@ h5 {
   justify-content: space-between;
   align-items: center;
   margin-top: 38px;
+}
+@media only screen and (max-width: 480px) {
+  .upload_type {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+    width: 100%;
+  }
+  .upload_type-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 .upload_type-link {
   padding: 11px 37px 10px 39px;
@@ -458,27 +485,6 @@ h5 {
 }
 
 @media screen and (max-width: 480px) {
-  .file_upload-container {
-    max-width: 400px;
-    padding: 0px 30px;
-  }
-  .file_upload-body {
-    width: 100%;
-    height: 193px;
-    padding: 0px 0px;
-  }
-  .upload_type {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 28px;
-    width: 100%;
-  }
-  .upload_type-link {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
   .imagebox {
     padding: 15px 20px;
   }
