@@ -280,6 +280,12 @@ h5 {
   padding-bottom: 54px;
   text-align: center;
 }
+@media only screen and (max-width: 480px) {
+  .file_upload-header {
+    padding: 88px 0px 40px 0px;
+    font-size: 30px;
+  }
+}
 .file_upload-body {
   display: grid;
   place-items: center;
@@ -452,10 +458,6 @@ h5 {
 }
 
 @media screen and (max-width: 480px) {
-  .file_upload-header {
-    padding: 88px 0px 40px 0px;
-    font-size: 30px;
-  }
   .file_upload-container {
     max-width: 400px;
     padding: 0px 30px;
@@ -517,7 +519,7 @@ h5 {
   grid-template-columns: 100px 1fr 360px;
   gap: 40px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-popup {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -534,7 +536,7 @@ h5 {
   cursor: pointer;
   margin: 40px 0 0 40px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-popup .close {
     margin: 0px;
     width: 36px;
@@ -561,7 +563,7 @@ h5 {
   margin-bottom: 90px;
   max-width: 765px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .image-enhancer-popup-gallery > ul {
     padding: 80px 30px 20px 30px;
     grid-template-columns: repeat(3, 1fr);
@@ -592,7 +594,7 @@ h5 {
      object-fit: cover;
   border-radius: 10px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-popup-gallery > ul li img {
     aspect-ratio: 1.2/1;
   }
@@ -612,13 +614,13 @@ h5 {
 .image-enhancer-popup-gallery > ul li .remove svg:hover {
   background: #FF1604;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-popup-gallery > ul li .remove svg {
     top: -14px;
     right: -3px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .image-enhancer-popup-gallery > ul li:nth-child(4), .image-enhancer-popup-gallery > ul li:nth-child(5) {
     display: none;
   }
@@ -627,7 +629,7 @@ h5 {
   width: 100%;
   aspect-ratio: 16/9;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-popup-gallery .big-image {
     padding: 0 40px;
   }
@@ -683,14 +685,14 @@ h5 {
   flex-wrap: wrap;
   padding: 36px 0;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .image-enhancer-popup-gallery .image-info {
     padding: 0px;
     display: block;
     margin-top: 20px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-popup-gallery .image-info {
     padding: 0 40px;
   }
@@ -701,7 +703,7 @@ h5 {
   flex-wrap: wrap;
   gap: 20px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .image-enhancer-popup-gallery .image-info-size {
     padding: 15px 20px;
     background: #151515;
@@ -730,7 +732,7 @@ h5 {
   border-top: 0px;
   border-bottom: 0px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .image-enhancer-popup-gallery .image-info-size.bd-lt-rt {
     padding: 15px 20px;
     border: 0px;
@@ -751,12 +753,12 @@ h5 {
   cursor: pointer;
   font-family: ProximaNova-Bold;
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .image-enhancer-popup-gallery .image-info .download-btn {
     margin-top: 20px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .image-enhancer-popup-gallery .image-info .download-btn {
     margin-top: 20px;
   }
@@ -775,7 +777,7 @@ h5 {
   background: #151515;
   border-radius: 10px 0px 0px 10px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-box {
     align-self: flex-end;
   }
@@ -786,7 +788,7 @@ h5 {
   border-radius: 10px 0px 0px 0px;
   color: #142630;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-box h3 {
     border-radius: 0px;
   }
@@ -805,7 +807,7 @@ h5 {
   font-family: ProximaNova-Bold;
   font-size: 18px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .image-enhancer-box-title {
     display: none;
   }

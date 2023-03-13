@@ -15,6 +15,12 @@
         color: $color-white;
         padding-bottom: 54px;
         text-align: center;
+
+        @include device(sm-phone)
+        {
+            padding: 88px 0px 40px 0px;
+                font-size: 30px; 
+        }
     }
 
     &-body {
@@ -212,11 +218,6 @@
 
 @media screen and (max-width: 480px) {
     .file_upload {
-
-        &-header {
-            padding: 88px 0px 40px 0px;
-            font-size: 30px;
-        }
 
         &-container {
             max-width: 400px;
